@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONABINGO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-image: url(/Users/takuyayamaguchi/Downloads/mainpage.jfif); /* 背景画像のパスを設定 */
+            background-size: cover; /* 背景画像をウィンドウ全体に広げる */
+            color: #333;
+            padding-top: 60px; /* ヘッダーの高さ分の余白を追加 */
+        }
+        .header {
+            position: fixed; /* ヘッダーを固定位置に配置 */
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between; /* ヘッダー内を左右に分割 */
+            align-items: center; /* 垂直方向の中央揃え */
+            padding: 10px;
+            z-index: 1000; /* ヘッダーを最前面に表示 */
+        }
+        .header-text {
+            font-size: 16px;
+            font-weight: bold;
+            margin-right: auto; /* テキストを左端に寄せるため */
+        }
+        nav {
+            margin-left: auto; /* ナビゲーションを右側に寄せる */
+        }
+        nav a {
+            margin-left: 10px; /* 各リンクの間隔を調整 */
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 90%; /* モバイル用に最大幅を調整 */
+            margin: 5px auto;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            font-size: 50px; /* h1要素のフォントサイズを大きくする */
+        }
+        
+
+        /* モバイル用のメディアクエリ */
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            .register-btn {
+                width: 80%; /* ボタンを狭める */
+            }
+            body {
+                background-size: contain; /* 背景画像をズームアウトさせる */
+            }
+        }
+
+        /* デスクトップ用のメディアクエリ */
+        @media (min-width: 601px) {
+            body {
+                background-size: 100%; /* デスクトップデバイスで背景画像をズームアウト */
+            }
+        }
+
+        .round-box-overview {
+            position: absolute;
+            top: 50%; /* 親要素の上端から50%の位置に配置 */
+            left: 50%; /* 親要素の左端から50%の位置に配置 */
+            transform: translate(-50%, -50%); /* 要素の中央揃え */
+            width: 300px; /* 幅を広くするための直径を設定 */
+            border-radius: 50%; /* ボックスを完全な丸にする */
+            background-color: rgba(0, 0, 0, 0.3); /* 黒色の透明度のある背景 */
+            padding: 20px;
+            text-align: center; /* テキストを中央揃え */
+            color: white; /* テキストの色を白に設定 */
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .round-box-mission {
+            position: absolute;
+            top: calc(50% + 150px); /* 上の round-box-overview からの距離を設定 */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 16px;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .round-box-tag {
+            position: absolute;
+            top: calc(50% + 350px); /* 上の round-box-overview からの距離を設定 */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 16px;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .round-box-reward {
+            position: absolute;
+            top: calc(50% + 600px); /* 上の round-box-overview からの距離を設定 */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 16px;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overview-text {
+            color: white; /* テキストの色を白に設定 */
+            font-size: 16px;
+            line-height: 1.6;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-text">ALL Mona-min presents...</div>
+        <!-- ナビゲーションリンク -->
+        <nav>
+            <a href="index.html">TOP</a>
+            <a href="map.html">MAP</a>
+            <a href="card.html">CARD</a>
+            <a href="info.html">INFO</a>
+        </nav>
+    </div>
+    <div class="container">
+        <h1>MONABINGO</h1>
+    </div>
+
+    <!-- スクロール時の挙動を制御するスクリプト -->
+    <script>
+        // ページ内リンクがクリックされたときのスクロール挙動
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 50, // ヘッダーの高さを考慮
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+        <div class="round-box-overview">
+            <p class="overview-text">
+                OVERVIEW...
+                <br>
+                <br>
+                吉村萌南さんの
+                <br>
+                誕生日を記念して
+                <br>
+                横浜LOVEアイドル2023
+                <br>
+                でもある『もなみん』が
+                <br>
+                過去に訪れた場所を
+                <br>
+                聖地巡礼する企画です。
+            </p>
+        </div>
+        <!-- 新しいテキストボックスを追加 -->
+        <div class="round-box-mission">
+            <p class="overview-text">
+                MISSION...
+                <br>
+                <br>
+                みなさんそれぞれで
+                <br>
+                BINGO-MAP
+                <br>
+                にある場所に行って
+                <br>
+                写真を撮ろう！
+            </p>
+        </div>
+        <!-- 新しいテキストボックスを追加 -->
+        <div class="round-box-tag">
+            <p class="overview-text">
+                そして
+                <br>
+                ハッシュタグをつけて
+                <br>
+                SNSに投稿しよう！
+                <br>
+                <br>
+                #吉村萌南
+                <br>
+                #もなみん
+                <br>
+                #もな民
+                <br>
+                #もなみんwalker
+                <br>
+                #ラフラフ
+            </p>
+        </div>
+        <!-- 新しいテキストボックスを追加 -->
+        <div class="round-box-reward">
+            <p class="overview-text">
+                REWARD...
+                <br>
+                <br>
+                BINGO-CARD
+                <br>
+                にある写真を撮って
+                <br>
+                ビンゴが揃えば
+                <br>
+                豪華景品が...!!
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONABINGO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-image: url(/Users/takuyayamaguchi/Pictures/subpage-edit.jpg); /* 背景画像のパスを設定 */
+            color: #333;
+            padding-top: 60px; /* ヘッダーの高さ分の余白を追加 */
+            background-repeat: repeat-y; /* 背景画像を縦方向に繰り返す */
+            background-position: center top; /* 背景画像の位置を中央の上部に設定 */
+        }
+        .header {
+            position: fixed; /* ヘッダーを固定位置に配置 */
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between; /* ヘッダー内を左右に分割 */
+            align-items: center; /* 垂直方向の中央揃え */
+            padding: 10px;
+            z-index: 1000; /* ヘッダーを最前面に表示 */
+        }
+        .header-text {
+            font-size: 16px;
+            font-weight: bold;
+            margin-right: auto; /* テキストを左端に寄せるため */
+            color: white; /* 文字を白くする */
+        }
+        nav {
+            margin-left: auto; /* ナビゲーションを右側に寄せる */
+        }
+        nav a {
+            margin-left: 10px; /* 各リンクの間隔を調整 */
+            text-decoration: none;
+            color: white; /* 文字を白くする */
+            font-weight: bold;
+        }
+        .container {
+            position: relative;
+            max-width: 100%; /* モバイル用に最大幅を調整 */
+            margin: 5px auto;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden; /* 横幅を超える部分を非表示にする */
+        }
+        .container img {
+            width: 50%; /* 画面幅に合わせる */
+            display: block; /* 画像をブロックレベル要素として表示 */
+            margin: 0 auto; /* 水平方向に中央揃え */
+        }
+        h1 {
+            text-align: center;
+            font-size: 50px; /* h1要素のフォントサイズを大きくする */
+            margin-top: 20px; /* 上部の余白を追加 */
+            color: white; /* BINGO-MAPの文字を白くする */
+        }
+        .top-section {
+            position: relative;
+            text-align: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1800px; /* 高さを自動調整 */
+        }
+
+        .top-section img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40%;
+            z-index: -1; /* 画像がテキストの背後になるように */
+            margin: 100px 0; /* 適宜調整してください */
+        }
+
+        .top-section h1 {
+            font-size: 50px;
+            color: white;
+            margin-top: 20px;
+            position: relative; /* 追加 */
+            z-index: 1; /* 追加 */
+        }
+
+        .information-text {
+          color: white;  
+          background-color: rgba(0, 0, 0, 0.5); /* 透明な黒色 */
+          padding: 20px; /* 適切な余白を追加 */
+        }
+        
+
+        /* モバイル用のメディアクエリ */
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            .register-btn {
+                width: 80%; /* ボタンを狭める */
+            }
+            body {
+                background-size: contain; /* 背景画像をズームアウトさせる */
+            }
+        }
+
+        /* デスクトップ用のメディアクエリ */
+        @media (min-width: 601px) {
+            body {
+                background-size: 100%; /* デスクトップデバイスで背景画像をズームアウト */
+            }
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-text">ALL Mona-min presents...</div>
+        <!-- ナビゲーションリンク -->
+        <nav>
+            <a href="index.html">TOP</a>
+            <a href="map.html">MAP</a>
+            <a href="card.html">CARD</a>
+            <a href="info.html">INFO</a>
+        </nav>
+    </div>
+    <!-- スクロール時の挙動を制御するスクリプト -->
+    <script>
+        // ページ内リンクがクリックされたときのスクロール挙動
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 50, // ヘッダーの高さを考慮
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+    <!-- mappoint-removebg-preview.pngの下に配置する要素を含む新しいコンテナを作成 -->
+    <div class="container">
+        <img src="/Users/takuyayamaguchi/Downloads/mappoint-removebg-preview.png" alt="背景画像">
+        <div class="top-section">
+            <h1>INFORMATION</h1>
+            <p class="information-text">
+                もなみん生誕イベント「MONA BINGO」
+                <br>
+                <br>
+                もなみんが今までに行った場所やお店を巡る
+                <br>
+                「もなみんwalker」。
+                <br>
+                今年22歳を迎えるもなみんの誕生日のお祝いとして、
+                <br>
+                この「もなみんWalker」を皆さんに楽しんでもらいつつ、
+                <br>
+                もなみんの生誕を盛り上げてもらいたい！
+                <br>
+                と思っております
+                <br>
+                <br>
+                【内容】
+                <br>
+                今回はもなみんが横浜で訪れた場所やお店を
+                <br>
+                皆さんにも巡っていただきたい
+                <br>
+                と思いついた特殊な思想の企画となっております！
+                <br>
+                今までもなみんが行った場所やお店を
+                <br>
+                記載したビンゴカードを用意しています。
+                <br>
+                マップは画面上部のMAPリンクより確認いただけます。
+                <br>
+                参加していただける皆さんには、
+                <br>
+                沢山のビンゴが出来るように
+                <br>
+                もなみんwalkerしてもらえればと思います！
+                <br>
+                行った場所にて撮影をしていただき、
+                <br>
+                以下のハッシュタグを付けてXにてポストしてください！
+                <br>
+                <br>
+                #吉村萌南
+                <br>
+                #もなみん
+                <br>
+                #もな民
+                <br>
+                #もなみんwalker
+                <br>
+                #ラフラフ
+                <br>
+                #横浜LOVEアイドル
+                <br>
+                #もなみん生誕祭2024
+                <br>
+                <br>
+                ビンゴが揃いましたら、
+                <br>
+                そのビンゴの数に応じて生誕委員会より
+                <br>
+                景品をプレゼントさせていただきます！
+                <br>
+                ちなみにビンゴしたかどうかは自己申告で構いません！
+                <br>
+                ビンゴした方は生誕委員会アカウントに
+                <br>
+                「ビンゴしました！」とリプライをいただければと思います！
+                <br>
+                景品のお渡しの方法についてリプライに書いていただければ、
+                <br>
+                ご希望に沿った形でのお渡しをさせていただきます。
+                <br>
+                （現場で！郵送で！オフり隊で！）
+                <br>
+                <br>
+                皆さん、是非ご参加ください！
+                <br>
+                もなみんの22歳の誕生日をみんなでお祝いしましょう！
+            </p>
+        </div>
+    </div> <!-- .container の終了タグ -->
+</body>
+</html>
