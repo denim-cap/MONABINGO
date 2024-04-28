@@ -125,6 +125,7 @@
         <div class="top-section">
             <h1>BINGO-CARD</h1>
             <img src="https://github.com/denim-cap/MONABINGO/blob/main/bingocard.jpg?raw=true" alt="bingocard">
+            <button id="downloadPDF">PDFでダウンロード</button>
             </div>
         </div>
 
@@ -145,6 +146,15 @@
                     });
                 }
             });
+        });
+        document.getElementById('downloadPDF').addEventListener('click', function () {
+        const bingocardImage = document.querySelector('.container img');
+        const pdf = new jsPDF();
+        const imgData = bingocardImage.src;
+
+        pdf.addImage(imgData, 'JPEG', 10, 10, 180, 150);
+
+        pdf.save('bingocard.pdf');
         });
     </script>
 </body>
