@@ -85,6 +85,10 @@
             position: relative; /* 追加 */
             z-index: 1; /* 追加 */
         }
+        .download-button {
+            display: flex;
+            justify-content: center;
+        }
         
         /* モバイル用のメディアクエリ */
         @media (max-width: 600px) {
@@ -116,9 +120,6 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease; /* ホバー時のトランジション */
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
         }
         #downloadPDF:hover {
             background-color: #0056b3; /* ホバー時の背景色 */
