@@ -53,6 +53,11 @@
             text-align: center;
             font-size: 50px; /* h1要素のフォントサイズを大きくする */
         }
+        .information-text {
+            color: white;  
+            background-color: rgba(0, 0, 0, 0.5); /* 透明な黒色 */
+            padding: 20px; /* 適切な余白を追加 */
+        }
         
 
         /* モバイル用のメディアクエリ */
@@ -74,78 +79,6 @@
             body {
                 background-size: 100%; /* デスクトップデバイスで背景画像をズームアウト */
             }
-        }
-
-        .round-box-overview {
-            position: absolute;
-            top: 50%; /* 親要素の上端から50%の位置に配置 */
-            left: 50%; /* 親要素の左端から50%の位置に配置 */
-            transform: translate(-50%, -50%); /* 要素の中央揃え */
-            width: 300px; /* 幅を広くするための直径を設定 */
-            border-radius: 50%; /* ボックスを完全な丸にする */
-            background-color: rgba(0, 0, 0, 0.3); /* 黒色の透明度のある背景 */
-            padding: 20px;
-            text-align: center; /* テキストを中央揃え */
-            color: white; /* テキストの色を白に設定 */
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        .round-box-mission {
-            position: absolute;
-            top: calc(50% + 150px); /* 上の round-box-overview からの距離を設定 */
-            left: 50%;
-            transform: translateX(-50%);
-            width: 300px;
-            height: 200px;
-            border-radius: 50%;
-            background-color: rgba(0, 0, 0, 0.3);
-            padding: 20px;
-            text-align: center;
-            color: white;
-            font-size: 16px;
-            line-height: 1.6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .round-box-tag {
-            position: absolute;
-            top: calc(50% + 350px); /* 上の round-box-overview からの距離を設定 */
-            left: 50%;
-            transform: translateX(-50%);
-            width: 300px;
-            height: 200px;
-            border-radius: 50%;
-            background-color: rgba(0, 0, 0, 0.3);
-            padding: 20px;
-            text-align: center;
-            color: white;
-            font-size: 16px;
-            line-height: 1.6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .round-box-reward {
-            position: absolute;
-            top: calc(50% + 600px); /* 上の round-box-overview からの距離を設定 */
-            left: 50%;
-            transform: translateX(-50%);
-            width: 300px;
-            height: 150px;
-            border-radius: 50%;
-            background-color: rgba(0, 0, 0, 0.3);
-            padding: 20px;
-            text-align: center;
-            color: white;
-            font-size: 16px;
-            line-height: 1.6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
         .overview-text {
@@ -192,7 +125,6 @@
         <!-- 新しいコンテナを作成 -->
     <div class="container">
         <div class="top-section">
-            <h1>INFORMATION</h1>
             <p class="information-text">
                 もなみん生誕イベント「MONA BINGO」
                 <br>
@@ -229,6 +161,7 @@
                 <br>
                 特殊な思想の企画となっております！
                 <br>
+                <br>
                 今までもなみんが行った場所やお店を
                 <br>
                 記載したビンゴカードを用意しています。
@@ -237,6 +170,7 @@
                 <br>
                 確認いただけます。
                 <br>
+                <br>
                 参加していただける皆さんには、
                 <br>
                 沢山のビンゴが出来るように
@@ -244,6 +178,7 @@
                 もなみんwalker
                 <br>
                 してもらえればと思います！
+                <br>
                 <br>
                 行った場所にて撮影をしていただき、
                 <br>
