@@ -11,10 +11,11 @@
             margin: 0;
             padding: 0;
             background-image: url(https://github.com/denim-cap/MONABINGO/blob/main/minatomirai.png?raw=true); /* 背景画像のパスを設定 */
-            background-size: contain; /* 背景画像をウィンドウ全体に広げる */
             color: white;
             padding-top: 60px; /* ヘッダーの高さ分の余白を追加 */
             background-position: center top; /* 背景画像の位置を中央の上部に設定 */
+            background-size: 100% auto; /* 背景画像の幅を100%に広げ、高さを自動調整 */
+            background-attachment: initial; /* 背景画像をスクロールに固定しない */
         }
         .header {
             position: fixed; /* ヘッダーを固定位置に配置 */
@@ -70,10 +71,6 @@
             }
             .register-btn {
                 width: 80%; /* ボタンを狭める */
-            }
-            body {
-                background-size: 100% auto; /* 背景画像の幅を100%に広げ、高さを自動調整 */
-                background-attachment: initial; /* 背景画像をスクロールに固定しない */
             }
         }
 
