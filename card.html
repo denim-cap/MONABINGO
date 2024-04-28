@@ -140,9 +140,10 @@
             <h1>BINGO-CARD</h1>
             <img src="https://github.com/denim-cap/MONABINGO/blob/main/bingocard.jpg?raw=true" alt="bingocard">
         </div>
-            <button id="downloadPDF">PDFでダウンロード</button>
+        <div class="download-button">
+            <a id="downloadPDF" href="URL_TO_YOUR_PDF_FILE" download="bingocard.pdf">PDFでダウンロード</a>
+        </div>
     </div>
-
     <!-- スクロール時の挙動を制御するスクリプト -->
     <script>
         // ページ内リンクがクリックされたときのスクロール挙動
@@ -160,17 +161,6 @@
                     });
                 }
             });
-        });
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js">
-        document.getElementById('downloadPDF').addEventListener('click', function () {
-            const bingocardImage = document.querySelector('https://github.com/denim-cap/MONABINGO/blob/main/bingocard.jpg?raw=true');
-            const pdf = new jsPDF();
-            const imgData = bingocardImage.src;
-
-            pdf.addImage(imgData, 'JPEG', 10, 10, 180, 150);
-
-            pdf.save('bingocard.pdf');
         });
     </script>
 </body>
