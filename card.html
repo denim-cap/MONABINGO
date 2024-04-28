@@ -165,13 +165,13 @@
             });
         });
         document.getElementById('downloadPDF').addEventListener('click', function () {
-        const bingocardImage = document.querySelector('.container img');
-        const pdf = new jsPDF();
-        const imgData = bingocardImage.src;
+            const bingocardImage = document.querySelector('.container img');
+            const pdf = new jsPDF();
+            const imgData = bingocardImage.src;
 
-        pdf.addImage(imgData, 'JPEG', 10, 10, 180, 150);
+            pdf.addImage(imgData, 'JPEG', 10, 10, 180, 150);
 
-        pdf.save('bingocard.pdf');
+            pdf.save('bingocard.pdf');
         });
     </script>
 </body>
