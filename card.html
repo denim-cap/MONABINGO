@@ -77,11 +77,29 @@
             display: block; /* 画像をブロックレベル要素として表示 */
             margin: 0 auto; /* 水平方向に中央揃え */
         }
+        .container2 {
+            position: relative;
+            max-width: 100%; /* モバイル用に最大幅を調整 */
+            margin: 5px auto;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden; /* 横幅を超える部分を非表示にする */
+        }
+        .container2 img {
+            width: 80%;
+            display: block; /* 画像をブロックレベル要素として表示 */
+            margin: 0 auto; /* 水平方向に中央揃え */
+        }
         h1 {
             text-align: center;
             font-size: 50px; /* h1要素のフォントサイズを大きくする */
             margin-top: 20px; /* 上部の余白を追加 */
             color: white; /* BINGO-MAPの文字を白くする */
+        }
+        h2 {
+            color: white;
+            font-size: 40px;
         }
         .top-section {
             position: relative;
@@ -165,8 +183,9 @@
     </div>
     <!-- mappoint-removebg-preview.pngの下に配置する要素を含む新しいコンテナを作成 -->
     <div class="container">
+        <h1>BINGO-CARD</h1>
         <div class="top-section">
-            <h1>BINGO-CARD</h1>
+            <h2>What is<br>BINGO<br>...?</h2>
             <img src="https://github.com/denim-cap/MONABINGO/blob/main/bingocard-final.jpg?raw=true" alt="bingocard">
         </div>
         <div class="download-button">
