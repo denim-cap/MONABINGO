@@ -132,6 +132,29 @@
             width: 100%;
             z-index: -1; /* 画像がテキストの背後になるように */
         }
+        .top-section2 {
+            text-align: center;
+            margin-bottom: 20px; /* 画像との間隔を調整 */
+        }
+        .top-section2 img {
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: -1; /* 画像がテキストの背後になるように */
+            margin: 100px auto; /* 適宜調整してください */
+        }
+        .top-section2 h1 {
+            font-size: 50px;
+            color: white;
+            margin-top: 20px;
+            position: relative; /* 追加 */
+            z-index: 1; /* 追加 */
+        }
+        .top-section2 h2 {
+            font-size: 50px;
+            color: white;
+            margin-top: 20px;
+        }
         
         /* モバイル用のメディアクエリ */
         @media (max-width: 600px) {
@@ -197,7 +220,7 @@
     </div>
     <div class="container2">
             <h2>CARD-DETAIL</h2>
-        <div class="top-section">
+        <div class="top-section2">
             <img src="https://github.com/denim-cap/MONABINGO/blob/main/bingocard-detail.png?raw=true" alt="bingocard-detail">
         </div>
         <div class="download-button">
