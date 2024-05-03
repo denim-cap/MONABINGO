@@ -15,6 +15,7 @@
             padding-top: 60px; /* ヘッダーの高さ分の余白を追加 */
             background-repeat: repeat-y; /* 背景画像を縦方向に繰り返す */
             background-position: center top; /* 背景画像の位置を中央の上部に設定 */
+            box-sizing: border-box;
         }
         .header {
             position: fixed; /* ヘッダーを固定位置に配置 */
@@ -26,12 +27,30 @@
             align-items: center; /* 垂直方向の中央揃え */
             padding: 10px;
             z-index: 1000; /* ヘッダーを最前面に表示 */
+            background-color: black;
+            box-sizing: border-box;
         }
         .header-text {
             font-size: 16px;
             font-weight: bold;
             margin-right: auto; /* テキストを左端に寄せるため */
             color: white; /* 文字を白くする */
+        }
+        .footer {
+            bottom: 0; /* フッターを画面の下部に配置 */
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between; /* フッター内を左右に分割 */
+            align-items: center; /* 垂直方向の中央揃え */
+            padding: 10px;
+            z-index: 1000; /* フッターを最前面に表示 */
+            background-color: black;
+            color: white;
+            box-sizing: border-box;
+        }
+        .footer-text2 {
+            padding-right: 10px; /* 右側に余白を追加 */
         }
         nav {
             margin-left: auto; /* ナビゲーションを右側に寄せる */
@@ -125,6 +144,7 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease; /* ホバー時のトランジション */
+            margin: 0 auto; /* 水平方向に中央揃え */
         }
         #downloadPDF:hover {
             background-color: #0056b3; /* ホバー時の背景色 */
@@ -148,12 +168,12 @@
             <img src="https://github.com/denim-cap/MONABINGO/blob/main/bingocard-final.jpg?raw=true" alt="bingocard">
         </div>
         <div class="download-button">
-            <a id="downloadPDF" href="https://drive.google.com/file/d/1AOFdQFEpr9ZYRLty9kWMKUtZA0XnWZOz/view?usp=sharing">ダウンロードはこちらから</a>
+            <a id="downloadPDF" href="https://drive.google.com/file/d/1AOFdQFEpr9ZYRLty9kWMKUtZA0XnWZOz/view?usp=sharing">downlosd</a>
         </div>
     </div>
     <div class="container2">
         <div class="top-section">
-            <h2>DETAIL</h2>
+            <h2>CARD-DETAIL</h2>
             <img src="https://github.com/denim-cap/MONABINGO/blob/main/bingocard-detail.png?raw=true" alt="bingocard-detail">
         </div>
     </div>
@@ -176,5 +196,9 @@
             });
         });
     </script>
+    <div class="footer">
+        <div class="footer-text">MNBINGO</div>
+        <div class="footer-text2">produced by<br>吉村萌南生誕祭実行委員会</div>
+    </div>
 </body>
 </html>
