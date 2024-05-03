@@ -65,7 +65,6 @@
             margin: 5px auto;
             padding: 5px;
             border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             overflow: hidden; /* 横幅を超える部分を非表示にする */
         }
         .container img {
@@ -79,10 +78,20 @@
             margin-top: 20px; /* 上部の余白を追加 */
             color: white; /* BINGO-MAPの文字を白くする */
         }
+        h2 {
+            color: white;
+        }
         .google-map {
             width: 100%; /* マップを画面に合わせる */
         }
         .top-section {
+            position: relative;
+            text-align: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        .second-section {
             position: relative;
             text-align: center;
             top: 0;
@@ -138,7 +147,9 @@
     <div class="container">
         <div class="top-section">
             <h1>BINGO-MAP</h1>
-            <img src="https://github.com/denim-cap/MONABINGO/blob/main/mappoint-removebg-preview.png?raw=true" alt="背景画像">
+        </div>
+        <img src="https://github.com/denim-cap/MONABINGO/blob/main/mappoint-removebg-preview.png?raw=true" alt="背景画像">
+        <div class="second-section">
             <h2>Where<br>should we go<br>with<br>MNBINGO<br>...?</h2>
             <!-- mappoint-removebg-preview.pngの下にGoogle マップを配置 -->
             <div class="google-map" id="map">
@@ -165,9 +176,9 @@
             });
         });
     </script>
-        <div class="footer">
-            <div class="footer-text">MNBINGO</div>
-            <div class="footer-text2">produced by<br>吉村萌南生誕祭実行委員会</div>
-        </div>
+    <div class="footer">
+        <div class="footer-text">MNBINGO</div>
+        <div class="footer-text2">produced by<br>吉村萌南生誕祭実行委員会</div>
+    </div>
 </body>
 </html>
