@@ -108,9 +108,9 @@
             left: 0;
             width: 100%;
             height: 600px;
+            margin-bottom: 20px; /* 画像との間隔を調整 */
         }
         .top-section img {
-            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
@@ -130,6 +130,14 @@
             margin-top: 20px;
             position: relative; /* 追加 */
             z-index: 1; /* 追加 */
+        }
+        .image-section {
+            position: relative;
+            text-align: center;
+        }
+        .image-section img {
+            width: 100%;
+            z-index: -1; /* 画像がテキストの背後になるように */
         }
         
         /* モバイル用のメディアクエリ */
@@ -183,9 +191,11 @@
     </div>
     <!-- mappoint-removebg-preview.pngの下に配置する要素を含む新しいコンテナを作成 -->
     <div class="container">
-        <h1>BINGO-CARD</h1>
+            <h1>BINGO-CARD</h1>
         <div class="top-section">
             <h2>What is<br>BINGO<br>...?</h2>
+        </div>
+        <div class="image-section">
             <img src="https://github.com/denim-cap/MONABINGO/blob/main/bingocard-final.jpg?raw=true" alt="bingocard">
         </div>
         <div class="download-button">
