@@ -26,12 +26,27 @@
             align-items: center; /* 垂直方向の中央揃え */
             padding: 10px;
             z-index: 1000; /* ヘッダーを最前面に表示 */
+            background-color: black;
         }
         .header-text {
             font-size: 16px;
             font-weight: bold;
             margin-right: auto; /* テキストを左端に寄せるため */
             color: white; /* 文字を白くする */
+        }
+        .footer {
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between; /* フッター内を左右に分割 */
+            align-items: center; /* 垂直方向の中央揃え */
+            padding: 10px;
+            z-index: 1000; /* ヘッダーを最前面に表示 */
+            background-color: black;
+        }
+        .footer-text2 {
+            padding-right: 10px; /* 右側に余白を追加 */
         }
         nav {
             margin-left: auto; /* ナビゲーションを右側に寄せる */
@@ -54,7 +69,7 @@
             overflow: hidden; /* 横幅を超える部分を非表示にする */
         }
         .container img {
-            width: 80%;
+            width: 60%;
             display: block; /* 画像をブロックレベル要素として表示 */
             margin: 0 auto; /* 水平方向に中央揃え */
         }
@@ -121,9 +136,10 @@
     </div>
     <!-- mappoint-removebg-preview.pngの下に配置する要素を含む新しいコンテナを作成 -->
     <div class="container">
-        <img src="https://github.com/denim-cap/MONABINGO/blob/main/mappoint-removebg-preview.png?raw=true" alt="背景画像">
         <div class="top-section">
             <h1>BINGO-MAP</h1>
+            <img src="https://github.com/denim-cap/MONABINGO/blob/main/mappoint-removebg-preview.png?raw=true" alt="背景画像">
+            <h2>Where<br>should we go<br>with<br>MNBINGO<br>...?</h2>
             <!-- mappoint-removebg-preview.pngの下にGoogle マップを配置 -->
             <div class="google-map" id="map">
                 <iframe src="https://www.google.com/maps/d/embed?mid=1GU0bdWXT83Cz8sDK61-mw1M-Acnf3Zs&ehbc=2E312F" width="100%" height="480"></iframe>
@@ -149,5 +165,9 @@
             });
         });
     </script>
+        <div class="footer">
+            <div class="footer-text">MNBINGO</div>
+            <div class="footer-text2">produced by<br>吉村萌南生誕祭実行委員会</div>
+        </div>
 </body>
 </html>
