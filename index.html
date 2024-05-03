@@ -33,6 +33,17 @@
             font-weight: bold;
             margin-right: auto; /* テキストを左端に寄せるため */
         }
+        .footer {
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between; /* フッター内を左右に分割 */
+            align-items: center; /* 垂直方向の中央揃え */
+            padding: 10px;
+            z-index: 1000; /* ヘッダーを最前面に表示 */
+            background-color: black;
+        }
         nav {
             margin-left: auto; /* ナビゲーションを右側に寄せる */
             padding-right: 10px; /* 右側に余白を追加 */
@@ -58,6 +69,11 @@
         h1 {
             text-align: center;
             font-size: 50px; /* h1要素のフォントサイズを大きくする */
+        }
+        h2 {
+            text-align: center;
+            font-size: 40px; /* h2要素のフォントサイズを大きくする */
+            color: black;
         }
         .top-section {
             text-align: center;
@@ -106,11 +122,20 @@
         <div class="top-message-text">22th birthday anniversary project</div>
     </div>
     <div class="container">
+        <div class="top-message-text">22th birthday anniversary project</div>
         <h1>MNBINGO</h1>
+        <h2>What is [color=white]MNBINGO[/color]...?</h2>
     </div>
     <div class="container">
         <h1>What is MNBINGO...?</h1>
     </div>
+    <div class="footer">
+        <div class="footer-text">MNBINGO</div>
+        <div class="footer-text2">22th birthday anniversary project produced by 吉村萌南生誕祭実行委員会</div>
+        <!-- ナビゲーションリンク -->
+        <nav>
+            <a href="https://roughlaugh-official.com/#/">rough × laugh</a>
+        </nav>
 
     <!-- スクロール時の挙動を制御するスクリプト -->
     <script>
